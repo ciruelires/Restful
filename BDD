@@ -1,0 +1,140 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Versión del servidor:         5.7.16-log - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             9.4.0.5125
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Volcando estructura de base de datos para BDEncuesta_AVV
+CREATE DATABASE IF NOT EXISTS `BDEncuesta_AVV` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `BDEncuesta_AVV`;
+
+-- Volcando estructura para tabla BDEncuesta_AVV.affiliation
+CREATE TABLE IF NOT EXISTS `affiliation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '0',
+  `logoSrc` varchar(50) NOT NULL DEFAULT '0',
+  `votes` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla BDEncuesta_AVV.affiliation: ~9 rows (aproximadamente)
+DELETE FROM `affiliation`;
+/*!40000 ALTER TABLE `affiliation` DISABLE KEYS */;
+INSERT INTO `affiliation` (`id`, `name`, `logoSrc`, `votes`) VALUES
+	(1, 'Avengers', 'img/avengers.png', 2),
+	(2, 'Fantastic 4', 'img/fantastic.bmp', 1),
+	(3, 'Green Lantern Corps', 'img/greenlantern.jpg', 0),
+	(4, 'Justice League of America', 'img/jla.GIF', 1),
+	(5, 'Suicide Squad', 'img/suicidesquad.png', 0),
+	(6, 'Thunderbolts', 'img/thunderbolts.gif', 0),
+	(7, 'Watchmen', 'img/watchmen.png', 0),
+	(8, 'X-men', 'img/xmen.bmp', 0),
+	(9, 'Inhumans', 'img/inhumans.jpg', 2);
+/*!40000 ALTER TABLE `affiliation` ENABLE KEYS */;
+
+-- Volcando estructura para tabla BDEncuesta_AVV.hero
+CREATE TABLE IF NOT EXISTS `hero` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '0',
+  `surname` varchar(50) NOT NULL DEFAULT '0',
+  `alias` varchar(50) NOT NULL DEFAULT '0',
+  `Powers` varchar(50) NOT NULL DEFAULT '0',
+  `password` varbinary(50) NOT NULL,
+  `voted` set('yes','no') NOT NULL DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `alias` (`alias`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla BDEncuesta_AVV.hero: ~13 rows (aproximadamente)
+DELETE FROM `hero`;
+/*!40000 ALTER TABLE `hero` DISABLE KEYS */;
+INSERT INTO `hero` (`id`, `name`, `surname`, `alias`, `Powers`, `password`, `voted`) VALUES
+	(30, 'Peter', 'Parker', 'Spiderman', 'Spider habilities', '��%�ॷr�2', 'yes'),
+	(31, 'Bruce', 'Wayne', 'Batman', 'Lot of money', '����)~~�#)���/�', 'yes'),
+	(32, 'Tony', 'Stark', 'Iron man', 'Lot of money', '�S��r���e"��ХO', 'no'),
+	(33, 'Alejandro', 'Martinez', 'Pasito', 'Flying', '�r{�T5� �{�EtO�', 'yes'),
+	(34, 'Frank', 'Castle', 'Punisher', 'gun\'s knowledge', '����F����pvD���', 'no'),
+	(35, 'Bruce', 'Banner', 'Hulk', 'Super strength and regeneration', '/�4l�:G���]Q', 'no'),
+	(36, 'Klark', 'Kent', 'Superman', 'Super strength and flying', '\'\nk�U��ӘD���g�+', 'no'),
+	(37, 'Hal', 'Jordan', 'Green Lantern', 'Creates every object he imagines', '%G�bo�6nJL��', 'no'),
+	(38, 'Steve', 'Rogers', 'Cpt America', 'Superhuman', '��ct�ޑ`n���o|', 'yes'),
+	(39, 'Reed', 'Richards', 'Mr Fantastic', 'Elastic', 'k����<�c�>@�L', 'yes'),
+	(40, 'A', 'a', 'A', 'A', 'A', 'no'),
+	(42, '2', '2', '2', '2', 'c4ca4238a0b923820dcc509a6f75849b', 'no');
+/*!40000 ALTER TABLE `hero` ENABLE KEYS */;
+
+
+-- Volcando estructura de base de datos para EncuestaHibernate
+CREATE DATABASE IF NOT EXISTS `EncuestaHibernate` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `EncuestaHibernate`;
+
+-- Volcando estructura para tabla EncuestaHibernate.affiliation
+CREATE TABLE IF NOT EXISTS `affiliation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '0',
+  `logoSrc` varchar(50) NOT NULL DEFAULT '0',
+  `votes` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla EncuestaHibernate.affiliation: ~9 rows (aproximadamente)
+DELETE FROM `affiliation`;
+/*!40000 ALTER TABLE `affiliation` DISABLE KEYS */;
+INSERT INTO `affiliation` (`id`, `name`, `logoSrc`, `votes`) VALUES
+	(1, 'Avengers', 'img/avengers.png', 2),
+	(2, 'Fantastic 4', 'img/fantastic.bmp', 1),
+	(3, 'Green Lantern Corps', 'img/greenlantern.jpg', 0),
+	(4, 'Justice League of America', 'img/jla.GIF', 1),
+	(5, 'Suicide Squad', 'img/suicidesquad.png', 0),
+	(6, 'Thunderbolts', 'img/thunderbolts.gif', 0),
+	(7, 'Watchmen', 'img/watchmen.png', 0),
+	(8, 'X-men', 'img/xmen.bmp', 0),
+	(9, 'Inhumans', 'img/inhumans.jpg', 2);
+/*!40000 ALTER TABLE `affiliation` ENABLE KEYS */;
+
+-- Volcando estructura para tabla EncuestaHibernate.hero
+CREATE TABLE IF NOT EXISTS `hero` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '0',
+  `surname` varchar(50) NOT NULL DEFAULT '0',
+  `alias` varchar(50) NOT NULL DEFAULT '0',
+  `Powers` varchar(50) NOT NULL DEFAULT '0',
+  `password` varbinary(50) NOT NULL,
+  `voted` set('yes','no') NOT NULL DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `alias` (`alias`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla EncuestaHibernate.hero: ~12 rows (aproximadamente)
+DELETE FROM `hero`;
+/*!40000 ALTER TABLE `hero` DISABLE KEYS */;
+INSERT INTO `hero` (`id`, `name`, `surname`, `alias`, `Powers`, `password`, `voted`) VALUES
+	(30, 'Peter', 'Parker', 'Spiderman', 'Spider habilities', '��%�ॷr�2', 'yes'),
+	(31, 'Bruce', 'Wayne', 'Batman', 'Lot of money', '����)~~�#)���/�', 'yes'),
+	(32, 'Tony', 'Stark', 'Iron man', 'Lot of money', '�S��r���e"��ХO', 'no'),
+	(33, 'Alejandro', 'Martinez', 'Pasito', 'Flying', '�r{�T5� �{�EtO�', 'yes'),
+	(34, 'Frank', 'Castle', 'Punisher', 'gun\'s knowledge', '����F����pvD���', 'no'),
+	(35, 'Bruce', 'Banner', 'Hulk', 'Super strength and regeneration', '/�4l�:G���]Q', 'no'),
+	(36, 'Klark', 'Kent', 'Superman', 'Super strength and flying', '\'\nk�U��ӘD���g�+', 'no'),
+	(37, 'Hal', 'Jordan', 'Green Lantern', 'Creates every object he imagines', '%G�bo�6nJL��', 'no'),
+	(38, 'Steve', 'Rogers', 'Cpt America', 'Superhuman', '��ct�ޑ`n���o|', 'yes'),
+	(39, 'Reed', 'Richards', 'Mr Fantastic', 'Elastic', 'k����<�c�>@�L', 'yes'),
+	(40, 'A', 'a', 'A', 'A', 'A', 'no'),
+	(42, '2', '2', '2', '2', 'c4ca4238a0b923820dcc509a6f75849b', 'no'),
+	(44, 'p', 'p', 'p', 'p', '83878c91171338902e0fe0fb97a8c47a', 'no'),
+	(45, 'r', 'r', 'r', 'r', '4b43b0aee35624cd95b910189b3dc231', 'no');
+/*!40000 ALTER TABLE `hero` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
