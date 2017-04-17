@@ -1,0 +1,135 @@
+body, html{
+    margin:0;    
+    font-family: Arial ;
+    font-weight: bold;
+}
+
+body{
+    background-image: url(../img/wallpaper.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#web{
+    text-align: center;
+    margin:0 auto;
+    height: 700px;
+    min-width: 600px;
+}
+h1, h2{
+    font-family: 'Chewy', cursive;
+    color:#ff0000;
+    text-shadow: 2px 2px yellow;
+    font-size: 40pt;
+}
+h2{
+    font-size: 30pt;
+}
+h3{
+    font-size: 20pt;
+    padding: 7px;
+}
+#container, #container_thick{
+    margin-top: 100px;
+    background-color: #ffcccc;
+    width: 600px;
+    margin:0 auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px ;
+    opacity: 0.9;
+    padding-bottom: 20px;
+}
+#container_thick{
+    width: 100%;
+    border-radius: 0;
+}
+input, .button{
+    font-weight: bold;
+    height: 30px;
+    margin: 10px;
+    font-size: 15pt;
+}
+.button{
+    cursor:pointer;
+    width: 300px;
+    font-size: 15pt;
+    display: inline-block;
+    line-height: 50px;
+    border:3px outset grey;
+    margin: 10px 25px;
+    border-radius: 5px;
+    background-color: #33cc00;
+    height: 50px;
+}
+.button:active{
+    border: 3px inset grey;
+    background-color: #009900;
+}
+.logout{
+    background-color:red;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+#arrow{    
+    color:#00cc00;
+    margin:0 auto;
+    width: 360px;
+    text-shadow: -1px 0 #090, 0 1px #090, 1px 0 #090, 0 -1px #090;
+}
+#arrow img{
+    margin-top: 3px;
+    float:left;
+    width: 60px;
+}
+.affiliation{
+    border:2px outset;
+    margin:20px;
+    display: inline-block;
+    padding: 10px;
+    width: 400px;
+    background-color:white;
+    box-shadow: 5px 5px 5px;
+    padding-bottom: 0;
+}
+.affiliation img{
+    width:250px;
+}
+
+.affiliation input{
+    position:relative;
+    width: auto;
+    margin-top: -5px;
+    position:absolute;
+}
+.affiliation h3{
+    margin-bottom: 0;
+}
+.vote{
+    margin-bottom: 20px;
+}
+h4{
+    padding: 30px;
+    font-size: 15pt;
+}
+.winner{
+    width:700px;
+}
+.recruited{
+    margin:0 auto;
+    background-color: white;
+    border:2px outset;
+    padding: 5px;
+    border-collapse: collapse;
+}
+.recruited td{
+    border:2px solid grey;
+    padding: 5px 10px;
+}
+.green{
+    color:#00cc00;
+}
+.voted_teams img{
+    width: 100px;
+}
